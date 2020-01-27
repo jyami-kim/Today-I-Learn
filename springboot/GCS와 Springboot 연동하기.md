@@ -80,11 +80,18 @@ public class GCPConfig {
 }
 ```
 
-다음 세개 클래스로 가능하다!
+```properties
+# application.properties
+cloud.bucket=[CUSTOM - my bucket name]
+local.file.storage.folder = [CUSTOM - my local saving folder]
+
+spring.cloud.gcp.project-id=[REQUIRED - My GCP project id]
+spring.cloud.gcp.storage.credentials.location=classpath:[REQUIRED - MY key.json]
+```
+
+
 
 상세히 들어가보자면
-
-
 
 ### 1. GCP Credential 설정 + Storage 세팅
 

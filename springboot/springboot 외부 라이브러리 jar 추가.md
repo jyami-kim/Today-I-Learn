@@ -22,3 +22,22 @@ dependencies {
 }
 ```
 
+
+
+### 3. 로컬 디렉토리를 라이브러리로 만들어서 의존성을 추가하는 방법
+
+여기서도 마찬가지로 libs/something_local.jar 파일을 추가하는 방법이다.
+
+```groovy
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+	compile( name: 'something_local')
+}
+```
+
