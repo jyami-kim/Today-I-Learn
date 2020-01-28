@@ -39,4 +39,3 @@ shell 열기 > jar 파일이 위치하는 directory로 이동하기
 ```shell
 jar cvf [파일명].jar -C dir/ /
 ```
-
