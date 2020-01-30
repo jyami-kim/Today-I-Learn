@@ -34,8 +34,9 @@ jar xvf example.jar
 
 shell 열기 > jar 파일이 위치하는 directory로 이동하기
 
-압축하려는 directory 명이 dir 이고 현재 디렉토리에 압축된 파일을 넣으며, 압축 파일의 이름을 example.jar 라고 하자. 
+현재 디렉토리를 압축하려고 하며, 압축 파일의 이름을 example.jar 라고 하자. 
 
 ```shell
-jar cvf [파일명].jar -C dir/ /
+jar cvf [파일명].jar [디렉토리]
+jar cvf example.jar .
 ```
