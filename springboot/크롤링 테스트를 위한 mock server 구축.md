@@ -7,7 +7,7 @@
 
 dependencies {
 	testImplementation group: 'org.mock-server', name: 'mockserver-netty', version: '5.6.1'
-	testImplementation group: 'org.mock-server', name: 'mockserver-client-java', version: '5.8.1'
+	testImplementation group: 'org.mock-server', name: 'mockserver-client-java', version: '5.8.1' // 흠 근데 이거 사용 안했음.
 }
 ```
 
