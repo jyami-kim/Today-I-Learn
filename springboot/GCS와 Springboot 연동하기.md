@@ -135,6 +135,22 @@ public Blob getFileFromGCS(String objectLocation) {
 
 이후 이 Blob 변수를 fileOutputStream을 이용해서 다운로드 받으면 끝난다.
 
+#### [ 추가 ] FileOutputStream 시 에러
+
+GCS에서 pptx 파일을 다운로드 받는 경우에 FileOutputStream이 제대로 작동하지 않았습니다. 따라서 Google API에 있던 download 메서드를 사용했습니다.
+
+```java
+public void getFileFromGCS(String objectLocation) {
+        Blob blob = storage.get(bucketName, objectLocation);
+        log.info("download File From GCS : " + blob.toString());
+		
+ 		new File(FilenameUtils.getFullPath(objectLocation)).mkdirs();
+        blob.downloadTo(Paths.get(objectLocation));
+    }
+```
+
+이때 만약 folder가 생성되지 않은 경로일 경우에는 downloadTo 메서드에서 익셉션이 터지기 때문에 File 클래스의 mkdirs 메서드를 이용해서 folder 생성후 download를 해준다.
+
 
 
 ### 3. GCS에 로컬 파일 업로드
