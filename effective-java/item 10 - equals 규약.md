@@ -223,7 +223,7 @@ s.equals(cis); // false
 
 구체 클래스를 확장해 새로운 값을 추가하면서 equals 규약을 만족시킬 방법은 존재하지 않는다.
 
-그렇다고 instanceof 검사 대신 **getClass** 검사를 하라는 것은 **아니다.** ****
+그렇다고 instanceof 검사 대신 **getClass** 검사를 하라는 것은 **아니다.** 
 
 ```java
 @Override public boolean equals(Object o){
