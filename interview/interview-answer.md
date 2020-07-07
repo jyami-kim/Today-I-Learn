@@ -14,6 +14,12 @@ Unchecked exception : 예측이 가능한 exception (runtime error) - nullpointe
 
 
 
+### 3. springboot 차이
+
+
+
+
+
 ### 4. 데드락
 
 리소스를 얻어야하는데, 얻지못하고 무한정 기다리는 상태 입니다.
