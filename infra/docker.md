@@ -31,3 +31,4 @@ flask와 함께 사용하는 WAS
 ```shell
 gunicorn --bind 0.0.0.0:5000 app:app # [파일 명]:[실행 main method 명]
 ```
+
